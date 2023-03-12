@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+ 
+    font-family: 'Climate Crisis', cursive;
+
+}
+
+body::before {
+    background-image: url('wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.8;
+  
+}
+.content
+{
+    align-self: center;
+    font-size: 1.5rem;
+    width: 70%;
+    margin-top: 0rem auto;
+text-align: justify;
+color: white
+
+
+    
+
+}
+.content h1{
+    font-size: 5rem;
+    color: rgb(31, 28, 37);
+    text-align: center;
+    
+}
+.cursor1
+{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 2px solid whitesmoke;
+    top: 0;
+    left: 0;
+    border-radius:50% ;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: 20ms;
+}
+.cursor2
+{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border: 2px solid whitesmoke;
+   top: 0;
+    left: 0;
+    border-radius:50% ;
+    transform: translate(-50%,-50%);
+    transition: 50ms;
+    background-color: black;
+
+}
+.mouseSize
+{
+    width: 30px;
+    height: 30px;
+  
+}
+.content:hover ~.cursor1
+{
+    background-color: black;
+opacity: 0.5;
+}
+
+.content:hover ~.cursor2
+{
+    opacity: 0;
+}
